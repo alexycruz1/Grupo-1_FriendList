@@ -9,6 +9,19 @@ Amigo::Amigo(char* nombre, char* numero){
 	this->nombre = nombre;
 	this->numero = numero;
 }
+
+void Amigo::getNombre(){
+	return nombre;
+}
+
+void Amigo::getNumero(){
+	return numero;
+}
+
+void Amigo::setNombre(char* nombre){
+	this -> nombre = nombre;
+}
+
 void Amigo::print(){
 	string name="",number="";
 	for(int i=0;i<25;i++){
