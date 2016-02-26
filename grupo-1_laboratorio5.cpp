@@ -58,6 +58,7 @@ int main(){
     refresh();
     printw("ingrese [r] para regresar: ");
     seguir = getch();
+    clear();
 
   }else if(entrada == '2'){
     clear();
@@ -69,6 +70,7 @@ int main(){
     printw("\n");
     printw("ingrese [r] para regresar: ");
     seguir = getch();
+    clear();
 
   }else if(entrada == '3'){
     clear();
