@@ -8,6 +8,8 @@ using namespace std;
 int main(){
   int y = 25;
   int x = 10;
+  int x1=0;
+  int y1=15;
   char entrada;
   char seguir;
   char nombre[25];
@@ -64,13 +66,24 @@ int main(){
     clear();    
 
   }else if(entrada == '2'){
+	x1 = 0;
+	y1 = 15;
     clear();
     printw("Nombre");
     refresh();
-    move(0, 15);
+    move(x1, y1);
     printw("Celular");
     refresh();
     printw("\n");
+
+	for(int i=0;i<amigos.size();i++){
+		move(i + 1, x1);
+		printw(amigos.at(i).getNombre());
+		move(i + 1, x1 + 16);
+		printw(amigos.at(i).getNumero());	
+	}
+	
+    move(20,0);
     printw("ingrese [r] para regresar: ");
     seguir = getch();
     clear();

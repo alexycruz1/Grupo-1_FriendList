@@ -1,12 +1,15 @@
 #include "amigo.h"
 #include <iostream>
 #include <string>
+#include <cstring>
 
 using namespace std;
 
 Amigo::Amigo(char* nombre, char* numero){
-	this->nombre = nombre;	
-	this->numero = numero;
+	this->nombre = new char[20];
+	this->numero = new char[10];
+	strcpy(this->nombre,nombre);	
+	strcpy(this->numero ,numero);
 }
 
 void Amigo::imprimir(){
