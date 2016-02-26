@@ -6,7 +6,9 @@ using namespace std;
 int main(){
   int y = 25;
   int x = 10;
-  char entrada[2];
+  char entrada;
+  char nombre[25];
+  char numero[8];
  
   initscr();
   (void)echo();
@@ -29,27 +31,27 @@ int main(){
   move(x++, y);
   attron(COLOR_PAIR(3));
   printw("3.- Salir");
-
+  printw("\n");
   move(x++, y);
-  addstr("Ingrese la opcion que desee: ");
-  refresh();
-  getnstr(entrada, sizeof(entrada) - 1);
+  printw("Ingrese la opcion que desea: ");
+  entrada = getch();
 
   refresh();
 
-  if(entrada[1] == '1'){
+  if(entrada == '1'){
     clear();
-    printw("Ingrese nombre: ");
+    addstr("Ingrese nombre: ");
     refresh();
-    //getnstr(/*variable*/, 25);
+    getnstr(nombre, sizeof(nombre) - 1);
     printw("\n");
-    printw("Ingrese numero: ");
+    addstr("Ingrese numero: ");
+    getnstr(numero, sizeof(numero) - 1);
     refresh();
   }
 
   refresh();
 
-  if(getch() == '2'){
+  if(entrada == '2'){
     clear();
     printw("Nombre");
     refresh();
@@ -60,7 +62,7 @@ int main(){
 
   refresh();
 
-  if(getch() == '3'){
+  if(entrada == '3'){
     clear();
     printw("GRACIAS POR USAR EL PROGRAMA");
   }
