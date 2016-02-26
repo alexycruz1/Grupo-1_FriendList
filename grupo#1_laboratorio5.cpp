@@ -9,6 +9,7 @@ int main(){
   int y = 25;
   int x = 10;
   char entrada;
+  char seguir;
   char nombre[25];
   char numero[8];
   vector<Amigo> amigos;
@@ -20,26 +21,31 @@ int main(){
   init_pair(2, COLOR_BLUE, COLOR_BLACK);
   init_pair(3, COLOR_RED, COLOR_BLACK);
   attron(COLOR_PAIR(1));
+  seguir = 'r';
 
-  move(x++, y);
-  printw("----------Menu-------");
-  printw("\n");
-  move(x++, y);
-  attron(COLOR_PAIR(2));
-  printw("1.- Agregar contacto");
-  printw("\n");
-  move(x++, y);
-  printw("2.- Listar contacto");
-  printw("\n");
-  move(x++, y);
-  attron(COLOR_PAIR(3));
-  printw("3.- Salir");
-  printw("\n");
-  move(x++, y);
-  printw("Ingrese la opcion que desea: ");
-  entrada = getch();
+  while(seguir == 'r'){
+    y = 25;
+    x = 10;
 
-  refresh();
+    move(x++, y);
+    printw("----------Menu-------");
+    printw("\n");
+    move(x++, y);
+    attron(COLOR_PAIR(2));
+    printw("1.- Agregar contacto");
+    printw("\n");
+    move(x++, y);
+    printw("2.- Listar contacto");
+    printw("\n");
+    move(x++, y);
+    attron(COLOR_PAIR(3));
+    printw("3.- Salir");
+    printw("\n");
+    move(x++, y);
+    printw("Ingrese la opcion que desea: ");
+    entrada = getch();
+
+    refresh();
 
   if(entrada == '1'){
     clear();
@@ -50,28 +56,29 @@ int main(){
     addstr("Ingrese numero: ");
     getnstr(numero, sizeof(numero) - 1);
     refresh();
-  }
+    printw("ingrese [r] para regresar: ");
+    seguir = getch();
 
-  refresh();
-
-  if(entrada == '2'){
+  }else if(entrada == '2'){
     clear();
     printw("Nombre");
     refresh();
     move(0, 15);
     printw("Celular");
     refresh();
-  }
+    printw("\n");
+    printw("ingrese [r] para regresar: ");
+    seguir = getch();
 
-  refresh();
-
-  if(entrada == '3'){
+  }else if(entrada == '3'){
     clear();
     printw("GRACIAS POR USAR EL PROGRAMA");
   }
 
+  clear();
+  }
+  
   getch();
   endwin();
-  
   return 0;
   }  
