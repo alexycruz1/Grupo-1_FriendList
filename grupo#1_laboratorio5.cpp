@@ -1,5 +1,7 @@
 #include <curses.h>
 #include <iostream>
+#include <vector>
+#include "amigo.h"
 
 using namespace std;
 
@@ -9,6 +11,7 @@ int main(){
   char entrada;
   char nombre[25];
   char numero[8];
+  vector<Amigo> amigos;
  
   initscr();
   (void)echo();
