@@ -3,10 +3,11 @@
 
 class Amigo{
   private:
-	char nombre[25];
-	char numero[25];
+	char* nombre;
+	char* numero;
 	//int nivel_amistad;
   public:
+	Amigo(char*, char*);
 	void imprimir();
 };
 
