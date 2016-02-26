@@ -23,3 +23,10 @@ void Amigo::imprimir(){
 
 	cout  << name << "		 " << number << endl;
 }
+
+char* Amigo::getNombre(){
+	return nombre;
+}
+char* Amigo::getNumero(){
+	return numero;
+}

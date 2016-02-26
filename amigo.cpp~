@@ -9,19 +9,7 @@ Amigo::Amigo(char* nombre, char* numero){
 	this->numero = numero;
 }
 
-<<<<<<< HEAD
-void Amigo::getNombre(){
-	return nombre;
-}
-
-void AMigo::getNumero(){
-	return numero;
-}
-
-void Amigo::print(){
-=======
 void Amigo::imprimir(){
->>>>>>> 5fc1a0b66b6aa842bc17d91d630d25ab96c6a16e
 	string name="",number="";
 	for(int i=0;i<25;i++){
 		if(nombre[i]!= 0)
@@ -34,4 +22,11 @@ void Amigo::imprimir(){
         }
 
 	cout  << name << "		 " << number << endl;
+}
+
+char* Amigo::getNombre(){
+	return nombre;
+}
+char* Amigo::getNumero(){
+	return numero;
 }

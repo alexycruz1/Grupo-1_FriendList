@@ -9,6 +9,8 @@ class Amigo{
   public:
 	Amigo(char*, char*);
 	void imprimir();
+	char* getNombre();
+	char* getNumero();
 };
 
 
