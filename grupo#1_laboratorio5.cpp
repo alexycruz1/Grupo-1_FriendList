@@ -73,9 +73,10 @@ int main(){
   }else if(entrada == '3'){
     clear();
     printw("GRACIAS POR USAR EL PROGRAMA");
+    refresh();
+    seguir = 'p';
   }
-
-  clear();
+  
   }
   
   getch();
